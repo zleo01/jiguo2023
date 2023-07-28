@@ -107,6 +107,7 @@
   width: 100%;
   background: #F7F7F7;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 .ul {
   width: 1000px;
