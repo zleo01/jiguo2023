@@ -197,7 +197,7 @@ article>.left>ul>li>p{
     font-size: 14px;
     color: #a3a3a3;
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0;
     border: 1px solid gray;
     padding: 0 30px;
     width: 100%;
@@ -219,7 +219,7 @@ article>.left>ul>li>.top>div{
 article>.left>ul>li>.top>div>span{
     display: inline-block;
     /* float: left; */
-    width: 30px;
+    /* width: 30px; */
     height: 100%;
     line-height: 50px;
     background-color: #b67575;

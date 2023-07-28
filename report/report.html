@@ -41,7 +41,27 @@
         <!-- 主题内容 -->
         <article>
             <div class="left">
-                <ul>
+                <ul class="articleUl">
+                    <li>
+                        <div class="top">
+                            <img src="../img/detail4.jpg" alt="">
+                            <p>空气净化器里面的学问惊呆你，</p>
+                            <div>
+                                <span>
+                                    <img src="../img/bg2.jpg" alt="">
+                                </span>
+                                <span>苏苏</span>
+                                <span>2016-01-25</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+                        </div>
+
+                        <p>空气净化器里面的学问惊呆你，你选对了吗 </p>
+                    </li>
+
+
+
                     <li>
                         <div class="top">
                             <img src="../img/detail4.jpg" alt="">
@@ -174,25 +194,58 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
+<!-- 引入axios -->
+<script src="./axios.min.js"></script>
+<script>
+    var str_ = '';
+    var ul_ = document.getElementsByClassName('articleUl')[0];
+    axios.get('http://127.0.0.1:3000/report/new', {
+    }).then(function (res) {
+        var res_ = res.data
+        // console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            // console.log(apply_);
+
+            str_ += `
+             <li>
+                <div class="top">
+                    <img src="${img_}" alt="">
+                    <p>${text_}</p>
+                    <div>
+                        <span>
+                            <img src="../img/bg2.jpg" alt="">
+                        </span>
+                        <span>${uName_}</span>
+                        <span>${endTime_}</span>
+                        <span>${num_}</span>
+                        <span>${apply_}</span>
+                    </div>
+                </div
+                <p>空气净化器里面的学问惊呆你，你选对了吗 </p>
+            </li>`
+
+            ul_.innerHTML = str_;
+
+
+
+
+
+        }
+
+
+    })
+
+
+
+</script>
