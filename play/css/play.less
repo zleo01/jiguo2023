@@ -129,20 +129,211 @@
 
 .box3 {
     width: 100%;
-    height: 300px;
-    background: #cecfcf;
+    // height: 300px;
+    background: #F7F7F7;
+    overflow: hidden;
 }
+
+.ul {
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    li {
+        margin-top: 20px;
+        width: 220px;
+        background: #fff;
+        border-radius: 0px 0px 6px 6px;
+
+        a {
+            img {
+                width: 220px;
+                height: 130px;
+                border-radius: 6px 6px 0 0;
+
+                &:hover {
+                    animation: donghua 1.5s linear infinite alternate;
+                }
+            }
+
+            .item31 {
+
+
+                p {
+                    padding: 7px 10px 10px;
+                    height: 60px;
+                    font-size: 14px;
+                    color: #333;
+
+                    span {
+                        display: block;
+                        font-size: 12px;
+                        color: #cecfcf;
+                    }
+                }
+
+                .item311 {
+                    padding: 13px 0;
+
+                    div {
+                        float: right;
+                        font-size: 12px;
+                        color: #cecfcf;
+
+                        span {
+                            display: inline-block;
+                            padding-left: 14px;
+                            margin-left: 3px;
+
+                            &:nth-of-type(1) {
+                                background: url(../../img/xin.png) no-repeat left center;
+                            }
+
+                            &:nth-of-type(2) {
+                                background: url(../../img/reply.png) no-repeat left center;
+                            }
+                        }
+                    }
+                }
+
+                .item311>span {
+                    color: #fe5341;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes donghua {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
 
 .box4 {
     width: 100%;
-    height: 300px;
-    background: #66c8c8;
+    background: #F7F7F7;
+    overflow: hidden;
     display: none;
 }
 
 .box5 {
     width: 100%;
-    height: 300px;
-    background: #232395;
+    background: #F7F7F7;
+    overflow: hidden;
     display: none;
+
+    .banxin {
+        width: 1000px;
+        margin: auto;
+        // background: #fff;
+
+        .item51 {
+            border-radius: 10px;
+            margin-top: 30px;
+            position: relative;
+            top: 0px;
+            background: #fff;
+
+            &>p {
+                padding: 19px 0 19px 30px;
+                font-size: 16px;
+                line-height: 25px;
+
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 19px;
+                    display: block;
+                    width: 6px;
+                    height: 25px;
+                    background: #fe5341;
+
+                }
+            }
+
+            .item51top {
+                // width: 1000px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+                border-bottom: 1px dotted #999;
+
+                li {
+                    width: 165px;
+                    height: 150px;
+                    text-align: center;
+
+                    // float: left;
+                    img {
+                        width: 96px;
+                        height: 96px;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        font-size: 14px;
+                        color: #666;
+                    }
+
+                    &:hover {
+                        p {
+                            color: #fe5341;
+                        }
+                    }
+                }
+            }
+
+            .item51bottom {
+                // margin-top: 20px;
+                padding-bottom: 30px;
+                // height: 90px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+
+                li {
+                    width: 150px;
+                    text-align: center;
+                    margin-top: 10px;
+
+                    a {
+                        font-size: 12px;
+                        color: #cecfcf;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.box6 {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+
+    // iframe {
+    //     width: 100%;
+    //     height: 300px;
+    // }
 }
