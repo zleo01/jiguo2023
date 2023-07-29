@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+
+    <!-- 顶部 -->
+    <div class="box1" id="top">
+        <div class="item11">
+            <div class="item12"><a href="#"><img src="./img/logonew.png" alt=""></a></div>
+            <ul>
+                <li><a href="./index.html" id="clr">首页</a></li>
+                <li><a href="./play/play.html">酷玩</a></li>
+                <li><a href="./buy/buy.html">导购</a></li>
+                <li><a href="./use/use.html">试用</a></li>
+                <li><a href="./report/report.html">报告</a></li>
+            </ul>
+            <div class="item13">
+                <div></div>
+                <a class="item13-register" href="./register.html">注册</a>&nbsp;
+                <a class="item13-login" href="./login.html">登录</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 注册页面 -->
+    <div class="register">
+        <div class="top">注册极果</div>
+        <div class="detail">
+            <input type="text" placeholder="请输入输入手机号"><span></span>
+            <!-- <br> -->
+            <input type="text" placeholder="请输入图片校验码"><img src="./img/imgCode.jpg" alt=""><span></span>
+            <input type="text" placeholder="请输入4位数字验证码"> <a class="number" href="">获取验证码</a><span></span>
+            <input type="text" placeholder="请输入用户名"><span></span>
+            <input type="password" placeholder="请输入密码"><span></span>
+            <input type="password" placeholder="确定新密码"><span></span>
+            <button>立即注册</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var ipts = document.getElementsByTagName('input')
+    var span = document.getElementsByTagName('span')
+
+    // 手机号判断
+    ipts[0].onblur = function () {
+        var reg = /^1[3456789]\d{9}$/;
+        if (reg.test(ipts[0].value)) {
+            span[0].innerHTML = '√'
+            span[0].style.color = 'green'
+        }
+        else {
+            span[0].innerHTML = '×'
+            span[0].style.color = 'red'
+            ipts[0].value = ''
+        }
+    }
+
+    //图形验证码判断
+    ipts[1].onblur = function () {
+        if (ipts[1].value == 'r2b7' || ipts[1].value == 'R2B7') {
+            span[1].innerHTML = '√'
+            span[1].style.color = 'green'
+        }
+        else {
+            span[1].innerHTML = '×'
+            span[1].style.color = 'red'
+            ipts[1].value = ''
+        }
+    }
+
+    //用户名判断
+    ipts[3].onblur = function () {
+        // 6-12个中英文字符
+        var reg = /^[\w\u4e00-\u9fa5]{6,12}$/;
+
+        if (reg.test(ipts[3].value)) {
+            span[3].innerHTML = '√'
+            span[3].style.color = 'green'
+        }
+        else {
+            span[3].innerHTML = '×'
+            span[3].style.color = 'red'
+            ipts[3].value = ''
+        }
+    }
+
+    //登录密码判断
+    ipts[4].onblur = function () {
+        //长度在6-12之间 字母数字下划线
+        var reg = /^\w{6,12}$/;
+        if (reg.test(ipts[4].value)) {
+            span[4].innerHTML = '√'
+            span[4].style.color = 'green'
+        }
+        else {
+            span[4].innerHTML = '×'
+            span[4].style.color = 'red'
+            ipts[4].value = ''
+        }
+    }
+
+    //确认密码判断
+    ipts[5].onblur = function () {
+        //长度在6-12之间 字母数字下划线
+
+        if (ipts[5].value == ipts[4].value) {
+            span[5].innerHTML = '√'
+            span[5].style.color = 'green'
+
+        }
+        else if (ipts[5].value == '') {
+            span[5].innerHTML = '×'
+            span[5].style.color = 'red'
+            ipts[5].value = ''
+        }
+        else {
+            span[5].innerHTML = '×'
+            span[5].style.color = 'red'
+            ipts[5].value = ''
+        }
+    }
+
+    var button = document.querySelector('button')
+    button.onclick = function () {
+        if ((ipts[0].value) && (ipts[3].value) && (ipts[4].value) &&
+            (ipts[5].value)) {
+            location.href = './index.html'
+
+            localStorage.setItem('usname', ipts[3].value)
+            localStorage.setItem('uspwd', ipts[4].value)
+
+            sessionStorage.setItem('uslogin', true);
+
+        }
+    }
+
+
+</script>
