@@ -218,6 +218,7 @@
     margin: 0 auto;
     /* 边框重合，触发bfc机制 */
     overflow: hidden;
+    background-color: #F7F7F7;
 }
 .box>h1{
     font-size: 40px;
@@ -323,7 +324,7 @@ article>.left>ul{
 article>.left>ul>li{
     width: 220px;
     height: 286px;
-    /* background-color: #8f4444; */
+    background-color: white;
     overflow: hidden;
     margin: 0 30px 35px 0;
 }
@@ -336,6 +337,7 @@ article>.left>ul>li>.img>img{
 
 article>.left>ul>li>.fontA>h2{
     font-size: 16px;
+    height: 42px;
 }
 article>.left>ul>li>.fontA>p{
     display: flex;
@@ -345,7 +347,7 @@ article>.left>ul>li>.fontA>p{
 article>.left>ul>li>.fontA>p>span{
     width: 40px;
     height: 20px;
-    /* background-color: #8e1313; */
+    /* background-color: #ebdede; */
     margin-left: 16px;
     border: 1px solid red;
 }
@@ -379,7 +381,7 @@ article>.leftA>ul{
 article>.leftA>ul>li{
     width: 220px;
     height: 286px;
-    /* background-color: #8f4444; */
+    /* background-color: #df1a1a; */
     overflow: hidden;
     margin: 0 30px 35px 0;
 }
@@ -401,7 +403,7 @@ article>.leftA>ul>li>.fontA>p{
 article>.leftA>ul>li>.fontA>p>span{
     width: 40px;
     height: 20px;
-    /* background-color: #8e1313; */
+    background-color: #8e1313;
     margin-left: 16px;
     border: 1px solid red;
 }
@@ -425,22 +427,6 @@ article>.leftA>ul>li>.fontA>p>span{
 img:hover{
     animation: donghua 1.6s infinite alternate;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
