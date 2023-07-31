@@ -13,7 +13,7 @@
     box-sizing: border-box;
 
     .item11 {
-        width: 1000px;
+        width: 1200px;
         margin: auto;
 
         .item12 {
@@ -56,24 +56,12 @@
         .item13 {
             margin-top: 10px;
             float: right;
-            width: 100px;
+            width: 350px;
             display: flex;
-            justify-content: space-around;
 
-            div:nth-of-type(1) {
-                width: 40px;
-                height: 40px;
-                background: url(../../img/search.png    ) no-repeat 0px 10px;
-                transition: transform 0.08s ease;
-                cursor: pointer;
-
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
-
-            div:nth-of-type(2) {
-                cursor: pointer;
+            // justify-content: space-around;
+            a {
+                display: block;
                 border: 1px solid #fe5341;
                 width: 50px;
                 height: 30px;
@@ -88,6 +76,40 @@
                     color: #ffff;
                 }
             }
+
+
+            div:nth-of-type(1) {
+                width: 40px;
+                height: 40px;
+                background: url(../../img/search.png    ) no-repeat 0px 10px;
+                transition: transform 0.08s ease;
+                cursor: pointer;
+                margin-right: 50px;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .touxiang {
+                height: 50px;
+                display: none;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    float: left;
+                }
+
+                .name {
+                    float: left;
+                    line-height: 50px;
+                    margin-left: 10px;
+                }
+
+            }
+
         }
     }
 }

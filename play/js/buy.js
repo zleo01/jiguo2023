@@ -29,7 +29,7 @@ window.onload = function () {
         var str = res.data
         var arr = ``
         for (var item of str) {
-            arr += ` <li><a href="#">
+            arr += ` <li><a href="./conceal.html">
             <img src="${item.img}" alt="">
             <div class="item31">
                 <p>${item.text}</p>
@@ -50,7 +50,7 @@ window.onload = function () {
         var str = res.data
         var arr = ``
         for (var item of str) {
-            arr += ` <li><a href="#">
+            arr += ` <li><a href="./conceal.html">
         <img src="${item.img}" alt="">
         <div class="item31">
             <p>${item.text}</p>
