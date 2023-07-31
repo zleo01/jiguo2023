@@ -716,6 +716,7 @@
             </dl>
         </div>
         <p class="footer-banquan">© 2016 极果版权所有</p>
+
     </div>
 
     <!-- 回到顶部 -->
@@ -791,6 +792,14 @@
         }
     }
 
+
+    //
+    var swiperslideone = document.getElementsByClassName('swiper-slide-one');
+    console.log(swiperslideone);
+    for (var item of swiperslideone) {
+        console.log(item);
+        item.setAttribute('href', './use/detail.html')
+    }
 
 
 </script>
