@@ -120,14 +120,18 @@
     width: 156px;
     font-size: 18px;
 }
-
-.ptf2>span{
+.AAA>.ptf2{
+    display: flex;
+    justify-content: center;
+}
+.AAA>.ptf2>span{
     width: 165px;
     height: 50px;
     line-height: 50px;
     color: #a3a3a3;
     /* background-color: #b96363; */
     border-top: 1px solid #a3a3a3;
+
 }
 
 
@@ -144,11 +148,13 @@
     border-bottom:  5px solid #fe5341 ;
     color: #fe5341;
 }
-.ptf2>.spanColorA{
-    color: black;
+.spanColorA{
+    color: black !important;
 }
 
-
+.AAA:nth-of-type(2){
+    display: none;
+}
 
 
 /* 主题内容 */
@@ -180,6 +186,15 @@ article>.left>.articleUl3{
     display: none;
 }
 article>.left>.articleUl4{
+    display: none;
+}
+article>.left>.articleUl5{
+    display: none;
+}
+article>.left>.articleUl6{
+    display: none;
+}
+article>.left>.articleUl7{
     display: none;
 }
 
