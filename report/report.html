@@ -34,15 +34,16 @@
     <div class="box">
         <h1>体验报告</h1>
         <p>
-            <span class="spanColor">最新</span>
-            <span>最热</span>
+            <span class="spanColor newZui">最新</span>
+            <span class="newZui">最热</span>
         </p>
 
         <!-- 主题内容 -->
         <article>
-            <div class="left">
+            <!-- 体验报告最新（排它法左边模块） -->
+            <div class="left newKuai">
                 <ul class="articleUl">
-                    <li>
+                    <!-- <li>
                         <div class="top">
                             <img src="../img/detail4.jpg" alt="">
                             <p>空气净化器里面的学问惊呆你，</p>
@@ -78,9 +79,23 @@
                         </div>
 
                         <p>空气净化器里面的学问惊呆你，你选对了吗 </p>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
+
+            <!-- 体验报告最热（排它法右边模块） -->
+            <div class="leftA newKuai">
+                <ul class="articleUlA">
+
+                </ul>
+
+            </div>
+
+
+
+
+
+
 
 
 
@@ -231,20 +246,85 @@
                         <span>${num_}</span>
                         <span>${apply_}</span>
                     </div>
-                </div
-                <p>空气净化器里面的学问惊呆你，你选对了吗 </p>
+                </div>
+                <p>关于格林威特空气净化器还有4篇报告，点击查看</p>
             </li>`
 
             ul_.innerHTML = str_;
-
-
-
-
 
         }
 
 
     })
+
+
+
+
+    var strA_ = '';
+    var ulA_ = document.getElementsByClassName('articleUlA')[0];
+    axios.get('http://127.0.0.1:3000/report/hot', {
+    }).then(function (res) {
+        var res_ = res.data
+        console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            // console.log(apply_);
+
+            strA_ += `
+             <li>
+                <div class="top">
+                    <img src="${img_}" alt="">
+                    <p>${text_}</p>
+                    <div>
+                        <span>
+                            <img src="../img/bg2.jpg" alt="">
+                        </span>
+                        <span>${uName_}</span>
+                        <span>${endTime_}</span>
+                        <span>${num_}</span>
+                        <span>${apply_}</span>
+                    </div>
+                </div>
+                <p>关于格林威特空气净化器还有${i}篇报告，点击查看</p>
+            </li>`
+
+            ulA_.innerHTML = strA_;
+
+        }
+
+
+    })
+
+
+
+
+    // 排它法
+    var newZui_ = document.getElementsByClassName('newZui');
+    var newKuai_ = document.getElementsByClassName('newKuai');
+
+    for(var i = 0;i<newZui_.length;i++){
+        newZui_[i].setAttribute('index',i)
+        newZui_[i].onclick = function(){
+            for(var j = 0;j<newZui_.length;j++){
+                newZui_[j].classList.remove('spanColor')
+                newKuai_[j].style.display = 'none'
+            }
+            var ind = this.getAttribute('index')
+            newZui_[ind].classList.add('spanColor')
+            newKuai_[ind].style.display = 'block'
+        }
+
+    }
+
+
+
 
 
 
