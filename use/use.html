@@ -16,10 +16,10 @@
         <div class="item11">
             <div class="item12"><a href="#"><img src="../img/logonew.png" alt=""></a></div>
             <ul>
-                <li><a href="#" id="clr">首页</a></li>
+                <li><a href="#">首页</a></li>
                 <li><a href="#">酷玩</a></li>
                 <li><a href="#">导购</a></li>
-                <li><a href="#">试用</a></li>
+                <li><a href="#" id="clr">试用</a></li>
                 <li><a href="#">报告</a></li>
             </ul>
             <div class="item13">
@@ -27,6 +27,109 @@
                 <div>注册</div>
             </div>
         </div>
+    </div>
+
+
+    <!-- 大盒子 -->
+    <div class="box">
+        <h1>体验报告</h1>
+        <p>
+            <span class="spanColor newZui">最新</span>
+            <span class="newZui">最热</span>
+        </p>
+        <!-- 二次排它法，跳转页面 -->
+        <p class="ptf2">
+            <span class="spanColorA A2">全部</span>
+            <span class="A2">申请中</span>
+            <span class="A2">试用中</span>
+            <span class="A2">已结束</span>
+        </p>
+
+        <!-- 主题内容 -->
+        <article>
+            <!-- 免费使用，大众试用（排它法左边模块） -->
+            <div class="left newKuai">
+
+                <ul class="articleUl articleUlAA">
+                    <li>
+                        <div class="img">
+                            <img src="../img/hot6.jpg" alt="">
+                        </div>
+                        <div class="fontA">
+                            <h2>运动设想眼睛的是点击的风景就</h2>
+                            <p>
+                                <span>2032</span>
+                                <span>20台</span>
+                            </p>
+                            <p>1329申请</p>
+                            <p>报告数量8</p>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="articleUlAA articleUl2">
+
+                </ul>
+
+                <ul class="articleUlAA articleUl3">
+
+                </ul>
+
+                <ul class="articleUlAA articleUl4">
+
+                </ul>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- 免费试用，体验师试用（排它法右边模块） -->
+            <div class="leftA newKuai">
+                <ul class="articleUl articleUlAA">
+                    <li>
+                        <div class="img">
+                            <img src="../img/hot6.jpg" alt="">
+                        </div>
+                        <div class="fontA">
+                            <h2>运动设想眼睛的是点击的风景就</h2>
+                            <p>
+                                <span>2032</span>
+                                <span>20台</span>
+                            </p>
+                            <p>1329申请</p>
+                            <p>报告数量8</p>
+                        </div>
+                    </li>
+                </ul>
+
+
+                <ul class="articleUlAA articleUl5">
+
+                </ul>
+
+                <ul class="articleUlAA articleUl3">
+
+                </ul>
+
+                <ul class="articleUlAA articleUl4">
+
+                </ul>
+
+            </div>
+
+
+
+
+
+        </article>
     </div>
 
 
@@ -115,25 +218,285 @@
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
+<!-- 引入axios -->
+<script src="./axios.min.js"></script>
+<script>
+    var str_ = '';
+    var ul_ = document.getElementsByClassName('articleUl')[0];
+    axios.get('http://127.0.0.1:3000/useing/public', {
+    }).then(function (res) {
+        var res_ = res.data
+        // console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            var totalnum_ = res_[i].totalnum
+            // console.log(totalnum_);
+            // console.log(apply_);
+
+            str_ += `
+            <li>
+               <div class="img">
+                   <img src="${img_}" alt="">
+               </div>
+               <div class="fontA">
+                   <h2>${text_}</h2>
+                   <p>
+                       <span>${totalnum_}</span>
+                       <span>${num_}台</span>
+                   </p>
+                   <p>${apply_}申请</p>
+                   <p>报告数量8</p>
+               </div>
+            </li>`
+
+            ul_.innerHTML = str_;
+
+        }
+
+
+    })
+
+
+
+
+
+
+    // 排它法
+    var newZui_ = document.getElementsByClassName('newZui');
+    var newKuai_ = document.getElementsByClassName('newKuai');
+
+    for (var i = 0; i < newZui_.length; i++) {
+        newZui_[i].setAttribute('index', i)
+        newZui_[i].onclick = function () {
+            for (var j = 0; j < newZui_.length; j++) {
+                newZui_[j].classList.remove('spanColor')
+                newKuai_[j].style.display = 'none'
+            }
+            var ind = this.getAttribute('index')
+            newZui_[ind].classList.add('spanColor')
+            newKuai_[ind].style.display = 'block'
+        }
+
+    }
+
+    // 排它法2
+    var A2_ = document.getElementsByClassName('A2');
+    var articleUlAA_ = document.getElementsByClassName('articleUlAA');
+    // console.log(articleUlAA_);
+    for (var i =0;i<A2_.length;i++){
+        A2_[i].setAttribute('index',i)
+        A2_[i].onclick = function(){
+            for(var j = 0; j<A2_.length;j++){
+                A2_[j].classList.remove('spanColorA')
+                articleUlAA_[j].style.display = 'none'
+            }
+
+            var ind = this.getAttribute('index')
+            A2_[ind].classList.add('spanColorA')
+            articleUlAA_[ind].style.display = 'flex'
+        }
+    }
+
+
+
+    // axios请求2
+
+    var strA_ = '';
+    var ulA_ = document.getElementsByClassName('articleUl2')[0];
+    axios.get('http://127.0.0.1:3000/report/hot', {
+    }).then(function (res) {
+        var res_ = res.data
+        // console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            var totalnum_ = res_[i].totalnum
+            // console.log(totalnum_);
+            // console.log(apply_);
+
+            strA_ += `
+            <li>
+               <div class="img">
+                   <img src="${img_}" alt="">
+               </div>
+               <div class="fontA">
+                   <h2>${text_}</h2>
+                   <p>
+                       <span>${totalnum_}</span>
+                       <span>${num_}台</span>
+                   </p>
+                   <p>${apply_}申请</p>
+                   <p>报告数量8</p>
+               </div>
+            </li>`
+
+            ulA_.innerHTML = strA_;
+
+        }
+
+
+    })
+
+    // axios请求3
+
+    var strB_ = '';
+    var ulB_ = document.getElementsByClassName('articleUl3')[0];
+    axios.get('http://127.0.0.1:3000/useing/public', {
+    }).then(function (res) {
+        var res_ = res.data
+        // console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            var totalnum_ = res_[i].totalnum
+            // console.log(totalnum_);
+            // console.log(apply_);
+
+            strB_ += `
+            <li>
+               <div class="img">
+                   <img src="${img_}" alt="">
+               </div>
+               <div class="fontA">
+                   <h2>${text_}</h2>
+                   <p>
+                       <span>${totalnum_}</span>
+                       <span>${num_}台</span>
+                   </p>
+                   <p>${apply_}申请</p>
+                   <p>报告数量8</p>
+               </div>
+            </li>`
+
+            ulB_.innerHTML = strB_;
+
+        }
+
+
+    })
+
+
+
+    // axios请求4
+
+    var strC_ = '';
+    var ulC_ = document.getElementsByClassName('articleUl4')[0];
+    axios.get('http://127.0.0.1:3000/report/hot', {
+    }).then(function (res) {
+        var res_ = res.data
+        // console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            var totalnum_ = res_[i].totalnum
+            // console.log(totalnum_);
+            // console.log(apply_);
+
+            strC_ += `
+            <li>
+               <div class="img">
+                   <img src="${img_}" alt="">
+               </div>
+               <div class="fontA">
+                   <h2>${text_}</h2>
+                   <p>
+                       <span>${totalnum_}</span>
+                       <span>${num_}台</span>
+                   </p>
+                   <p>${apply_}申请</p>
+                   <p>报告数量8</p>
+               </div>
+            </li>`
+
+            ulC_.innerHTML = strC_;
+            
+
+        }
+
+
+    })
+
+
+    // 二
+    var str1_ = '';
+    var ul1_ = document.getElementsByClassName('articleUl')[1];
+    axios.get('http://127.0.0.1:3000/report/hot', {
+    }).then(function (res) {
+        var res_ = res.data
+        // console.log(res_);
+        for (var i = 0; i < res_.length; i++) {
+            // console.log(i);
+            var img_ = res_[i].img;
+            // console.log(img_);
+            var text_ = res_[i].text;
+            var uName_ = res_[i].uName;
+            var endTime_ = res_[i].endTime;
+            var num_ = res_[i].num;
+            var apply_ = res_[i].apply;
+            var totalnum_ = res_[i].totalnum
+            // console.log(totalnum_);
+            // console.log(apply_);
+
+            str1_ += `
+            <li>
+               <div class="img">
+                   <img src="${img_}" alt="">
+               </div>
+               <div class="fontA">
+                   <h2>${text_}</h2>
+                   <p>
+                       <span>${totalnum_}</span>
+                       <span>${num_}台</span>
+                   </p>
+                   <p>${apply_}申请</p>
+                   <p>报告数量8</p>
+               </div>
+            </li>`
+
+            ul1_.innerHTML = str1_;
+
+
+        }
+
+
+    })
+
+   
+
+    
+
+
+
+
+
+
+
+</script>
