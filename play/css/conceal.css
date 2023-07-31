@@ -155,6 +155,41 @@
   position: absolute;
   top: 50px;
   right: 0px;
+  background: #fff;
+  text-align: center;
+  border: 1px solid #cecfcf;
+  box-shadow: 0 1px 1px 1px #eee;
+}
+.box2 .banxin .item23 div {
+  display: inline-block;
+  width: 130px;
+  height: 100px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.box2 .banxin .item23 div:hover .yin {
+  display: inline-block;
+}
+.box2 .banxin .item23 div:hover .xian {
+  display: none;
+}
+.box2 .banxin .item23 div:hover a {
+  color: #fe5341;
+}
+.box2 .banxin .item23 div:hover a p {
+  margin-top: 5px;
+}
+.box2 .banxin .item23 div a {
+  color: #cecfcf;
+}
+.box2 .banxin .item23 div:nth-of-type(1) {
+  border-right: 1px solid #cecfcf;
+}
+.box2 .banxin .item23 div p {
+  margin-top: 5px;
+}
+.box2 .banxin .item23 div .yin {
+  display: none;
 }
 .box6 {
   width: 100%;
