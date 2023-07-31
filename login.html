@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        /* 顶部导航栏 */
+        .box1 {
+            width: 100%;
+            height: 70px;
+            padding: 5px;
+            box-shadow: 0 0 5px #cecfcf inset;
+            box-sizing: border-box;
+        }
+
+        .item11 {
+            width: 1200px;
+            margin: auto;
+            /* background-color: #80c269; */
+        }
+
+        .item12 {
+            display: inline-block;
+        }
+
+        .item12>a>img {
+            width: 132px;
+            height: 51px;
+            position: relative;
+            top: -10px;
+        }
+
+        .item11>ul {
+            display: inline-block;
+            width: 500px;
+            height: 60px;
+            padding: 5px 0px 0px 20px;
+        }
+
+        .item11>ul>li {
+            float: left;
+            width: 90px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .item11>ul>li:hover a {
+            color: #fe5341;
+        }
+
+        .item11>ul>li>a {
+            color: #333;
+        }
+
+        .item13 {
+            margin-top: 10px;
+            float: right;
+            width: 350px;
+            display: flex;
+            /* justify-content: space-around; */
+            /* background-color: skyblue; */
+        }
+
+        .item13>div:nth-of-type(1) {
+            width: 40px;
+            height: 40px;
+            background: url(../img/search.png) no-repeat 0px 10px;
+            transition: transform 0.08s ease;
+            cursor: pointer;
+        }
+
+        .touxiang {
+            /* width: 50px; */
+            height: 50px;
+            /* background-color: red; */
+            display: none;
+        }
+
+        .touxiang>img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .name {
+            float: left;
+            line-height: 50px;
+            margin-left: 10px;
+        }
+
+        .item13>div:nth-of-type(1):hover {
+            transform: scale(1.1);
+        }
+
+        .item13>a {
+            display: block;
+            border: 1px solid #fe5341;
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 7px;
+            border-radius: 3px;
+            color: #fe5341;
+        }
+
+        .item13-login {
+            margin: 0 15px;
+        }
+
+        .item13>a:hover {
+            background: #fe5341;
+            color: #ffff;
+        }
+
+        #clr {
+            color: #fe5341;
+        }
+
+
+        /* 登录框 */
+        .login {
+            width: 1000px;
+            height: 600px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 1px solid rgba(128, 128, 128, .5);
+
+        }
+
+        .top {
+            width: 100px;
+            height: 30px;
+            /* background-color: skyblue; */
+            border-left: 6px solid #fe5341;
+            font-size: 23px;
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        .detail {
+            width: 420px;
+            height: 512px;
+            /* background-color: skyblue; */
+            margin: auto;
+            margin-top: 50px;
+            /* text-align: center; */
+            position: relative;
+            /* padding-right: 30px; */
+        }
+
+        input {
+            display: inline-block;
+            /* margin: auto; */
+            width: 380px;
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border: none;
+            background: #f7f7f7;
+        }
+
+        input::placeholder {
+            font-size: 16px;
+            color: gray;
+            /* margin-left: 10px; */
+            text-indent: 10px;
+        }
+
+        .number {
+            display: inline-block;
+            padding: 12px 20px;
+            color: gray;
+            border: 1px solid gray;
+            border-radius: 5px;
+            position: absolute;
+            right: 33px;
+            top: 143px;
+        }
+
+        button {
+            width: 380px;
+            height: 50px;
+            background-color: #fe5341;
+            line-height: 50px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部 -->
+    <div class="box1" id="top">
+        <div class="item11">
+            <div class="item12"><a href="#"><img src="./img/logonew.png" alt=""></a></div>
+            <ul>
+                <li><a href="./index.html" id="clr">首页</a></li>
+                <li><a href="./play/play.html">酷玩</a></li>
+                <li><a href="./buy/buy.html">导购</a></li>
+                <li><a href="./use/use.html">试用</a></li>
+                <li><a href="./report/report.html">报告</a></li>
+            </ul>
+            <div class="item13">
+                <div></div>
+                <a class="item13-register" href="./register.html">注册</a>&nbsp;
+                <a class="item13-login" href="./login.html">登录</a>
+                <div class="touxiang">
+                    <img src="./img/bg8.jpg" alt=""><span class="name"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录框 -->
+    <div class="login">
+        <div class="top">登录极果</div>
+        <div class="detail">
+            <input class="username" type="text" placeholder="请输入用户名"><span></span>
+            <input class="pwd" type="password" placeholder="请输入密码"><span></span>
+            <!-- <input type="password" placeholder="确定新密码"><span></span> -->
+            <button>立即登录</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    var button = document.querySelector('button')
+    // console.log(button);
+
+    button.onclick = function () {
+        var username = document.querySelector('.username')
+        var pwd = document.querySelector('.pwd')
+
+        var userValue = username.value;
+        var pwdValue = pwd.value;
+
+        var loginusername = localStorage.getItem('usname')
+        var loginpassword = localStorage.getItem('uspwd')
+
+        if (userValue == loginusername && pwdValue == loginpassword) {
+            // console.log(1);
+            location.href = './index.html'
+            sessionStorage.setItem('uslogin', true);
+        }
+        else {
+            alert('用户名或密码输入错误！')
+        }
+    }
+
+
+</script>
