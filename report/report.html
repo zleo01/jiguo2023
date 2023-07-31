@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>报告</title>
     <link rel="stylesheet" href="./report.css">
 </head>
 
@@ -307,10 +307,10 @@
     var newZui_ = document.getElementsByClassName('newZui');
     var newKuai_ = document.getElementsByClassName('newKuai');
 
-    for(var i = 0;i<newZui_.length;i++){
-        newZui_[i].setAttribute('index',i)
-        newZui_[i].onclick = function(){
-            for(var j = 0;j<newZui_.length;j++){
+    for (var i = 0; i < newZui_.length; i++) {
+        newZui_[i].setAttribute('index', i)
+        newZui_[i].onclick = function () {
+            for (var j = 0; j < newZui_.length; j++) {
                 newZui_[j].classList.remove('spanColor')
                 newKuai_[j].style.display = 'none'
             }
