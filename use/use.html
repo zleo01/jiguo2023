@@ -260,7 +260,7 @@
 <script>
     var str_ = '';
     var ul_ = document.getElementsByClassName('articleUl')[0];
-    axios.get('http://127.0.0.1:3000/useing/public', {
+    axios.get('http://127.0.0.1:3000/report/hot', {
     }).then(function (res) {
         var res_ = res.data
         // console.log(res_);
@@ -303,7 +303,7 @@
     // er
     var str_ = '';
     var ul_ = document.getElementsByClassName('articleUl')[0];
-    axios.get('http://127.0.0.1:3000/useing/public', {
+    axios.get('http://127.0.0.1:3000/report/hot', {
     }).then(function (res) {
         var res_ = res.data
         // console.log(res_);
@@ -650,7 +650,7 @@
             var uName_ = res_[i].uName;
             var endTime_ = res_[i].endTime;
             var num_ = res_[i].num;
-            var apply_ = res_[i].apply;
+            var apply_ = res_[i].apply;g
             var totalnum_ = res_[i].totalnum
             // console.log(totalnum_);
             // console.log(apply_);
@@ -672,6 +672,8 @@
             </li>`
 
             ulF_.innerHTML = strF_;
+
+            
 
 
         }
