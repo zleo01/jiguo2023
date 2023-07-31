@@ -31,6 +31,7 @@
             </div>
         </div>
     </div>
+
     <!-- 顶部banner图 -->
     <div class="banner">
 
@@ -40,7 +41,8 @@
             <span>￥599</span>
             <span>20台</span>
             <p>申请时间剩余：13天5小时37分钟</p>
-            <div class="apply">立即申请</div>
+            <a class="apply" href="">立即申请</a>
+            <!-- <div class="apply">立即申请</div> -->
 
         </div>
     </div>
@@ -634,8 +636,6 @@
                     </p>
                 </a>
             </li>
-
-
         </ul>
     </div>
 
@@ -655,8 +655,8 @@
 
             <dl>
                 <dt>免费试用</dt>
-                <dd><a href="">试用流程</a></dd>
-                <dd><a href="">如何提高成功率</a></dd>
+                <dd><a href="./help.html">试用流程</a></dd>
+                <dd><a href="./help.html">如何提高成功率</a></dd>
             </dl>
 
             <!-- 友情链接 -->
@@ -709,8 +709,8 @@
             <!-- 厂商合作 -->
             <dl>
                 <dt>厂商合作</dt>
-                <dd><a href="">关于极果</a></dd>
-                <dd><a href="">联系我们</a></dd>
+                <dd><a href="./about.html">关于极果</a></dd>
+                <dd><a href="./about.html">联系我们</a></dd>
                 <dd><a href="">商务合作：BD@jiguo.com</a></dd>
                 <dd><a href="">CEO邮箱：CEO@jiguo.com</a></dd>
             </dl>
@@ -752,7 +752,7 @@
 
     findMore.onclick = function () {
 
-        find.style.height = '1080px';
+        find.style.height = '1200px';
         findMore.style.display = 'none'
     }
 
@@ -772,7 +772,7 @@
     }
 
 
-    //
+    //注册 登录 
     window.onload = function () {
         if (sessionStorage.getItem('uslogin')) {
             var itemRegister = document.querySelector('.item13-register')

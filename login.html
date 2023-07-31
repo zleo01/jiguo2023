@@ -190,7 +190,6 @@
             position: absolute;
             right: 33px;
             top: 143px;
-
         }
 
         button {
@@ -204,7 +203,6 @@
             font-size: 20px;
         }
     </style>
-
 </head>
 
 <body>
@@ -265,9 +263,10 @@
         if (userValue == loginusername && pwdValue == loginpassword) {
             // console.log(1);
             location.href = './index.html'
-
             sessionStorage.setItem('uslogin', true);
-
+        }
+        else {
+            alert('用户名或密码输入错误！')
         }
     }
 
