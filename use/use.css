@@ -124,7 +124,7 @@
 
 
 /* 大盒子 */
-.box{
+.box {
     width: 1000px;
     /* height: 3000px; */
     /* background-color: #2b7798fb; */
@@ -133,28 +133,37 @@
     overflow: hidden;
     background-color: #F7F7F7;
 }
-.box>h1{
+
+.box>h1 {
     font-size: 40px;
     margin: 50px 0 40px;
     color: #333;
     text-align: center;
     font-weight: 500;
 }
+
 /* 导航 排它法选项 */
-.box>p{
+.box>p {
     text-align: center;
 }
-.box>p>span{
+
+.box>p>span {
     display: inline-block;
     /* height: 30px; */
     width: 156px;
     font-size: 18px;
 }
-.AAA>.ptf2{
+
+.box>p>span:hover {
+    cursor: pointer;
+}
+
+.AAA>.ptf2 {
     display: flex;
     justify-content: center;
 }
-.AAA>.ptf2>span{
+
+.AAA>.ptf2>span {
     width: 165px;
     height: 50px;
     line-height: 50px;
@@ -162,6 +171,10 @@
     /* background-color: #b96363; */
     border-top: 1px solid #a3a3a3;
 
+}
+
+.AAA>.ptf2>span:hover {
+    cursor: pointer;
 }
 
 
@@ -174,21 +187,22 @@
 
 
 /* 选中的样式 */
-.spanColor{
-    border-bottom:  5px solid #fe5341 ;
+.spanColor {
+    border-bottom: 5px solid #fe5341;
     color: #fe5341;
 }
-.spanColorA{
+
+.spanColorA {
     color: black !important;
 }
 
-.AAA:nth-of-type(2){
+.AAA:nth-of-type(2) {
     display: none;
 }
 
 
 /* 主题内容 */
-article{
+article {
     padding-top: 25px;
     width: 100%;
     height: 100%;
@@ -200,7 +214,7 @@ article{
 
 
 /* 免费使用，大众试用（排它法左边）*/
-article>.left{
+article>.left {
     width: 100%;
     height: 100%;
     /* background-color: #35b5cb; */
@@ -209,55 +223,65 @@ article>.left{
     /* display: none; */
 }
 
-article>.left>.articleUl2{
+article>.left>.articleUl2 {
     display: none;
 }
-article>.left>.articleUl3{
+
+article>.left>.articleUl3 {
     display: none;
 }
-article>.left>.articleUl4{
+
+article>.left>.articleUl4 {
     display: none;
 }
-article>.left>.articleUl5{
+
+article>.left>.articleUl5 {
     display: none;
 }
-article>.left>.articleUl6{
+
+article>.left>.articleUl6 {
     display: none;
 }
-article>.left>.articleUl7{
+
+article>.left>.articleUl7 {
     display: none;
 }
 
 
-article>.left>ul{
+article>.left>ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-article>.left>ul>li{
+
+article>.left>ul>li {
     width: 220px;
     height: 286px;
     background-color: white;
     overflow: hidden;
-    margin: 0 30px 35px 0;
+    /* margin: 0 30px 35px 0; */
+    margin-bottom: 30px;
+    border-radius: 5px;
 }
 
 
-article>.left>ul>li>.img>img{
+article>.left>ul>li>.img>img {
     width: 220px;
     height: 130px;
 }
 
-article>.left>ul>li>.fontA>h2{
+article>.left>ul>li>.fontA>h2 {
     font-size: 16px;
     height: 42px;
 }
-article>.left>ul>li>.fontA>p{
+
+article>.left>ul>li>.fontA>p {
     display: flex;
     justify-content: center;
     margin: 10px 0;
 }
-article>.left>ul>li>.fontA>p>span{
+
+article>.left>ul>li>.fontA>p>span {
     width: 40px;
     height: 20px;
     /* background-color: #ebdede; */
@@ -278,7 +302,7 @@ article>.left>ul>li>.fontA>p>span{
 
 
 /* 免费试用，体验师试用（排它法右边） */
-article>.leftA{
+article>.leftA {
     width: 100%;
     height: 100%;
     /* background-color: #35b5cb; */
@@ -286,34 +310,39 @@ article>.leftA{
     border-radius: 5px;
     display: none;
 }
-article>.leftA>ul{
+
+article>.leftA>ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-article>.leftA>ul>li{
+
+article>.leftA>ul>li {
     width: 220px;
     height: 286px;
     /* background-color: #df1a1a; */
     overflow: hidden;
     margin: 0 30px 35px 0;
+    border-radius: 5px;
 }
 
 
-article>.leftA>ul>li>.img>img{
+article>.leftA>ul>li>.img>img {
     width: 220px;
     height: 130px;
 }
 
-article>.leftA>ul>li>.fontA>h2{
+article>.leftA>ul>li>.fontA>h2 {
     font-size: 16px;
 }
-article>.leftA>ul>li>.fontA>p{
+
+article>.leftA>ul>li>.fontA>p {
     display: flex;
     justify-content: center;
     margin: 10px 0;
 }
-article>.leftA>ul>li>.fontA>p>span{
+
+article>.leftA>ul>li>.fontA>p>span {
     width: 40px;
     height: 20px;
     background-color: #8e1313;
@@ -337,7 +366,7 @@ article>.leftA>ul>li>.fontA>p>span{
     }
 }
 
-img:hover{
+img:hover {
     animation: donghua 1.6s infinite alternate;
 }
 
