@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酷玩</title>
+    <link rel="stylesheet" href="./css/play.css">
+    <script src="./js/play.js"></script>
+    <script src="./js/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="box1" id="top">
+        <div class="item11">
+            <div class="item12"><a href="#"><img src="../img/logonew.png" alt=""></a></div>
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../play/play.html" id="clr">酷玩</a></li>
+                <li><a href="../buy/buy.html">导购</a></li>
+                <li><a href="../use/use.html">试用</a></li>
+                <li><a href="../report/report.html">报告</a></li>
+            </ul>
+            <div class="item13">
+                <div></div>
+                <a class="item13-register" href="../register.html">注册</a>&nbsp;
+                <a class="item13-login" href="../login.html">登录</a>
+                <div class="touxiang">
+                    <img src="./img/bg8.jpg" alt=""><span class="name"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="box2">
+        <h1>发现酷玩</h1>
+        <div class="item21">
+            <span id="xuanz">最新</span>
+            <span>最热</span>
+            <span>品类</span>
+        </div>
+    </div>
+    <div class="box3 box">
+        <ul class="ul1 ul">
+        </ul>
+    </div>
+    <div class="box4 box">
+        <ul class="ul2 ul">
+        </ul>
+    </div>
+    <div class="box5 box">
+        <div class="banxin">
+            <div class="item51">
+                <p>生活<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_1.png" alt="">
+                            <p>空气净化器（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_2.png" alt="">
+                            <p>吸尘器（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_3.png" alt="">
+                            <p>扫地机器人（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_4.png" alt="">
+                            <p>电风扇（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_5.png" alt="">
+                            <p>净水壶（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_6.png" alt="">
+                            <p>电饭煲（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_7.png" alt="">
+                            <p>咖啡机（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_8.png" alt="">
+                            <p>榨汁机（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">电视（21）</a></li>
+                    <li><a href="#">空调（21）</a></li>
+                    <li><a href="#">洗衣机（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                    <li><a href="#">净水壶（21） </a></li>
+                    <li><a href="#">热水器（21）</a></li>
+                    <li><a href="#">咖啡机（21）</a></li>
+                    <li><a href="#">原汁机（21）</a></li>
+                    <li><a href="#">消毒/洗碗机（21）</a></li>
+                    <li><a href="#">豆浆机（21）</a></li>
+                    <li><a href="#">扫地机器人（21）</a></li>
+                    <li><a href="#">电风扇（21）</a></li>
+                    <li><a href="#">除湿机（21）</a></li>
+                    <li><a href="#">干燥机（21） </a></li>
+                    <li><a href="#">取暖器（21）</a></li>
+                    <li><a href="#">原汁机（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>个人护理<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_9.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_10.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_11.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>健康<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_1.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_2.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_3.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>个人护理<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_9.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_4.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_5.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_6.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_7.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_8.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>出行<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_11.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_2.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_9.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>运动户外<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_10.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_8.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_5.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>摄影<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_3.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_2.png" alt="">
+                            <p>剃须刀（21）</p>
+                        </a>
+                    </li>
+                    <li><a href="#">
+                            <img src="../img/cat_9.png" alt="">
+                            <p>按摩器（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+            <div class="item51">
+                <p>手机<span id="span"></span></p>
+                <ul class="item51top">
+                    <li><a href="#">
+                            <img src="../img/cat_11.png" alt="">
+                            <p>电动牙刷（21）</p>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="item51bottom">
+                    <li><a href="#">冲牙器（21）</a></li>
+                    <li><a href="#">洁面仪（21）</a></li>
+                    <li><a href="#">蒸面器（21）</a></li>
+                    <li><a href="#">加湿器（21）</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="box6">
+        <iframe src="./dibu.html" allowfullscreen scrolling="no" marginheight="0" marginwidth="0" frameborder=”no”  
+            width="100%" height="400"></iframe>
+    </div>
+</body>
+
+</html>
