@@ -202,6 +202,21 @@
             border-radius: 8px;
             font-size: 20px;
         }
+
+        .forget {
+            width: 380px;
+            margin-top: 10px;
+            /* background-color: skyblue; */
+            font-size: 14px;
+        }
+
+        .forget>a {
+            text-decoration: underline;
+        }
+
+        .forget>a:nth-of-type(2) {
+            float: right;
+        }
     </style>
 </head>
 
@@ -238,6 +253,10 @@
             <input class="pwd" type="password" placeholder="请输入密码"><span></span>
             <!-- <input type="password" placeholder="确定新密码"><span></span> -->
             <button>立即登录</button>
+            <div class="forget">
+                <a href="">忘记密码</a>
+                <a href="">验证码登录</a>
+            </div>
         </div>
     </div>
 
