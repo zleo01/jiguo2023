@@ -32,7 +32,7 @@ window.onload = function () {
             // console.log(item);
             for (var c of item) {
                 // console.log(c);
-                arr += ` <li><a href="#">
+                arr += ` <li><a href="../../use/detail.html">
                 <img src="${c.img}" alt="">
                 <div class="item31">
                     <p>${c.text}
@@ -62,7 +62,7 @@ window.onload = function () {
             // console.log(item);
             for (var c of item) {
                 // console.log(c);
-                arr += ` <li><a href="#">
+                arr += ` <li><a href="../../use/detail.html">
                 <img src="${c.img}" alt="">
                 <div class="item31">
                     <p>${c.text}
