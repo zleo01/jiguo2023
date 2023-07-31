@@ -408,8 +408,23 @@ article>.leftA>ul>li>.fontA>p>span{
 
 
 
+@keyframes donghua {
+    0% {
+        opacity: 1;
+    }
 
+    50% {
+        opacity: 0.3;
+    }
 
+    100% {
+        opacity: 1;
+    }
+}
+
+img:hover{
+    animation: donghua 1.6s infinite alternate;
+}
 
 
 
